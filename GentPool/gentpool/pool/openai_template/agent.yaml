@@ -6,8 +6,9 @@ description: An openai agent capable of online web search and browsing.
 target_tasks:
   - web search
   - web browsing
+  - pdf reading
 llm:
-  model_name: gpt-4-0613
+  model_name: gpt-4o-mini
   params:
     temperature: 0.0
     top_p: 0.9
@@ -17,3 +18,4 @@ prompt_template: !prompt VanillaPrompt
 plugins:
   - name: google_search
   - name: web_page
+  - name: pdf_reader

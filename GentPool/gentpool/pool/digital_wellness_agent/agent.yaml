@@ -1,0 +1,19 @@
+# Digital Wellness Agent
+name: digital_wellness_agent
+version: 0.0.1
+type: openai
+description: An agent that promotes digital wellness by tracking screen time, habit forming, and providing mindfulness tips.
+target_tasks:
+  - digital wellness
+  - habit tracking
+  - mindfulness exercises
+llm:
+  model_name: gpt-4o-mini
+  params:
+    temperature: 0.5
+    top_p: 0.8
+    repetition_penalty: 1.0
+    max_tokens: 1024
+prompt_template: !prompt VanillaPrompt
+plugins:
+  - name: digital_wellness_tool

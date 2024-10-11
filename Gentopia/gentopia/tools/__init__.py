@@ -13,6 +13,9 @@ from .gradio import *
 from .code_interpreter import PythonCodeInterpreter
 from .file_operation import WriteFile, ReadFile
 from .duckduckgo import DuckDuckGo
+from .pdf_reader import PDFReader
+from .digital_wellness_tool import DigitalWellnessTool  
+from .environment_monitor import EnvironmentalMonitoringAgent  
 
 
 def load_tools(name: str) -> BaseTool:
@@ -23,6 +26,9 @@ def load_tools(name: str) -> BaseTool:
         "write_file": WriteFile,
         "read_file": ReadFile,
         "google_search": GoogleSearch,
+        "pdf_reader": PDFReader,
+        "environment_monitor": EnvironmentalMonitoringAgent,
+        "digital_wellness_tool": DigitalWellnessTool,
         "text_to_speech": TTS,
         "image_caption": ImageCaption,
         "text_to_image": TextToImage,
